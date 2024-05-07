@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: uperf-np
+  labels:
+    app: uperf-app
+spec:
+  type: NodePort
+  ports:
+  - name: tcp-cport    # TCP control port
+    port:       31000  # Port exposed within the cluster
+    targetPort: 31000  # Port on the pod
+    nodePort:   31000  # Port accessible externally on each node
+    protocol:   TCP
+  - name: tcp-dport    # TCP dataport
+    port:       31001  
+    targetPort: 31001  
+    nodePort:   31001 
+    protocol:   TCP
+  - name: udp-cport    # UDP control port
+    port:       31000  # Port exposed within the cluster
+    targetPort: 31000  # Port on the pods
+    nodePort:   31000  # Port accessible externally on each node
+    protocol:   UDP
+  - name: udo-dport   # UDP dataport
+    port:       31001  
+    targetPort: 31001  
+    nodePort:   31001 
+    protocol:   UDP
+  selector:
+    app: uperf-app    # Select a pod with this label

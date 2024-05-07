@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: iperf-app
+  labels:
+    app: iperf-app
+spec:
+  nodeSelector: {"kubernetes.io/hostname": "sno-h07"}
+  containers:
+  - name: uperf
+    image: quay.io/hnhan/ocp-tools:iperf3
+    imagePullPolicy: IfNotPresent
+    command: [ "/bin/bash", "-c", "--" ]
+    args: [ "while true; do sleep 300000; done;" ]
+    securityContext: 
+       privileged: true       
