@@ -22,10 +22,10 @@ The IPsec tunnel between the SNO and RHEL is configured according to the instruc
  ### INGRESS:
 - workoad server runs on SNO
 - workload client runs on RHEL
+In the INGRESS topology, we will be using k8s nodePort service to expose the workload server to the external world.
  ### EGRESS:
 - workoad server runs on RHEL
 - workload client runs on SNO
-In the INGRESS topology, we will be using k8s nodePort service to expose the workload server to the external world.
 
 ### Prerequisite:
 ### Build the special Uperf that supports "-B" option 
