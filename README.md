@@ -34,6 +34,7 @@ On the RHEL machine.
 git clone https://github.com/HughNhan/uperf.git
 cd uperf
 git switch double-free-and-dash-B
+autoreconf --install
 CFLAGS= ./configure --disable-sctp
 make
 make install
