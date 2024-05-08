@@ -1,5 +1,6 @@
 # IPsec Manual Testing
 
+The primary purpose of the manual testing procedure descibed in this is repo is to verify the IPsec setup and the workload(s) connectivity. Scale, performance tunings and metrics capture are outside the scope of this procedure.
 
 ## Testbed
 
