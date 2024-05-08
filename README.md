@@ -43,7 +43,7 @@ make install
 #### Get the custom resource (CR) files
 On the bastion, clone this repo.
 ```
-[root@d16-h06-000-r650:IPsec-bastion ]$ git clone <this_repo>; cd <repo-dir>
+[root@d16-h06-000-r650:IPsec-bastion ]$ git clone https://github.com/HughNhan/IPsecTest.git ; cd IPsecTest
 ```
 Step 1: create 2 sets of nodePort one for iperf3 and one for uperf.
 ```
