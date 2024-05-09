@@ -145,7 +145,7 @@ uperf <argument list>
                                        SNO IP           data nodePort
                                         vvvvvvvv          vvvvvv
   Client on RHEL:         $ remotehost=198.18.10.10  port=31001 duration=10 wsize=512 rsize=4096 nthreads=1 protocol=udp  \
-                             uperf -v -R -m stream.xml -P 31000  -B 100.50.10.8
+                             uperf -v -R -m stream.xml -P 31000  -B 100.50.1.8
                                                           ^^^^^    ^^^^^^^^^^
                                                 control nodePort  IPsec interface
 ```
